@@ -50,7 +50,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("BDCCurrency version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("BDCC version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  bdccd [options]                     " + "\n" +
                   "  bdccd [options] <command> [params]  " + _("Send command to -server or bdccd") + "\n" +
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bdccurrency:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bdcc:"))
                 fCommandLine = true;
 
         if (fCommandLine)

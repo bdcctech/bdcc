@@ -920,7 +920,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bdccurrency";
+    const char* pszModule = "bdcc";
 #endif
     if (pex)
         return strprintf(
@@ -950,13 +950,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BDCCurrency
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BDCCurrency
-    // Mac: ~/Library/Application Support/BDCCurrency
-    // Unix: ~/.bdccurrency
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BDCC
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BDCC
+    // Mac: ~/Library/Application Support/BDCC
+    // Unix: ~/.bdcc
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "BDCCurrency";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BDCC";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -968,10 +968,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "BDCCurrency";
+    return pathRet / "BDCC";
 #else
     // Unix
-    return pathRet / ".bdccurrency";
+    return pathRet / ".bdcc";
 #endif
 #endif
 }

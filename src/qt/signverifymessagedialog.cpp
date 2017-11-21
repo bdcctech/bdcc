@@ -24,11 +24,11 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a BDCCurrency address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a BDCC address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a BDCCurrency address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)"));
-    ui->signatureIn_VM->setPlaceholderText(tr("Enter BDCCurrency signature"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a BDCC address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)"));
+    ui->signatureIn_VM->setPlaceholderText(tr("Enter BDCC signature"));
 #endif
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);

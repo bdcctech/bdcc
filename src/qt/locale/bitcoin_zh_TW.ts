@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BDCCurrency</source>
-        <translation>關于黑幣</translation>
+        <source>About BDCC</source>
+        <translation>關于BDCC</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BDCCurrency&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;黑幣客戶端&lt;/b&gt; 版本</translation>
+        <source>&lt;b&gt;BDCC&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;BDCC客戶端&lt;/b&gt; 版本</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The BDCCurrency developers</source>
+Copyright © 2014 The BDCC developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your BDCCurrency addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>這是您用來接收支付的黑幣地址列表。爲不同的支付方建立不同的地址以便于了解支付來源。</translation>
+        <source>These are your BDCC addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>這是您用來接收支付的BDCC地址列表。爲不同的支付方建立不同的地址以便于了解支付來源。</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -73,8 +73,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a BDCCurrency address</source>
-        <translation>對信息進行簽名以證明您對該黑幣地址的所有權</translation>
+        <source>Sign a message to prove you own a BDCC address</source>
+        <translation>對信息進行簽名以證明您對該BDCC地址的所有權</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -88,8 +88,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified BDCCurrency address</source>
-        <translation>驗證信息以保證其經過指定黑幣地址的簽名</translation>
+        <source>Verify a message to ensure it was signed with a specified BDCC address</source>
+        <translation>驗證信息以保證其經過指定BDCC地址的簽名</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -225,7 +225,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>警告：如果您丟失了加密該錢包的密碼，其中所有的黑幣將會丟失！</translation>
+        <translation>警告：如果您丟失了加密該錢包的密碼，其中所有的BDCC將會丟失！</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -256,8 +256,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>BDCCurrency will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>黑幣客戶端即將關閉以完成加密過程。請記住，加密錢包並不能完全防止您的電子貨幣被入侵您計算機的木馬軟件盜竊。</translation>
+        <source>BDCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>BDCC客戶端即將關閉以完成加密過程。請記住，加密錢包並不能完全防止您的電子貨幣被入侵您計算機的木馬軟件盜竊。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -350,8 +350,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BDCCurrency</source>
-        <translation>關于黑幣 </translation>
+        <source>Show information about BDCC</source>
+        <translation>關于BDCC </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,12 +390,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a BDCCurrency address</source>
-        <translation>向指定的地址發送黑幣</translation>
+        <source>Send coins to a BDCC address</source>
+        <translation>向指定的地址發送BDCC</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for BDCCurrency</source>
+        <source>Modify configuration options for BDCC</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -436,7 +436,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+555"/>
-        <source>BDCCurrency</source>
+        <source>BDCC</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -446,7 +446,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About BDCCurrency</source>
+        <source>&amp;About BDCC</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -498,13 +498,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>BDCCurrency client</source>
-        <translation>黑幣客戶端</translation>
+        <source>BDCC client</source>
+        <translation>BDCC客戶端</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to BDCCurrency network</source>
-        <translation><numerusform>與黑幣網絡建立了 %n 個連接</numerusform></translation>
+        <source>%n active connection(s) to BDCC network</source>
+        <translation><numerusform>與BDCC網絡建立了 %n 個連接</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -598,7 +598,7 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid BDCCurrency address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid BDCC address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -721,7 +721,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. BDCCurrency can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. BDCC can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1041,7 +1041,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BDCCurrency address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid BDCC address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1060,7 +1060,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>BDCCurrency-Qt</source>
+        <source>BDCC-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1133,12 +1133,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BDCCurrency after logging in to the system.</source>
+        <source>Automatically start BDCC after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BDCCurrency on system login</source>
+        <source>&amp;Start BDCC on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1148,7 +1148,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BDCCurrency client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the BDCC client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1178,7 +1178,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-57"/>
-        <source>Connect to the BDCCurrency network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the BDCC network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1223,7 +1223,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BDCCurrency.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting BDCC.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1290,7 +1290,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BDCCurrency.</source>
+        <source>This setting will take effect after restarting BDCC.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1309,7 +1309,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BDCCurrency network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BDCC network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1383,7 +1383,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bdccurrency: click-to-pay handler</source>
+        <source>Cannot start bdcc: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1551,7 +1551,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BDCCurrency-Qt help message to get a list with possible BDCCurrency command-line options.</source>
+        <source>Show the BDCC-Qt help message to get a list with possible BDCC command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1571,12 +1571,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>BDCCurrency - Debug window</source>
+        <source>BDCC - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>BDCCurrency Core</source>
+        <source>BDCC Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1586,7 +1586,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BDCCurrency debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the BDCC debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1596,7 +1596,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the BDCCurrency RPC console.</source>
+        <source>Welcome to the BDCC RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1777,7 +1777,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a BDCCurrency address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
+        <source>Enter a BDCC address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1877,7 +1877,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid BDCCurrency address</source>
+        <source>WARNING: Invalid BDCC address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1951,7 +1951,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BDCCurrency address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
+        <source>Enter a BDCC address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2012,7 +2012,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BDCCurrency address</source>
+        <source>Sign the message to prove you own this BDCC address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2044,7 +2044,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BDCCurrency address</source>
+        <source>Verify the message to ensure it was signed with the specified BDCC address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2055,7 +2055,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BDCCurrency address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
+        <source>Enter a BDCC address (e.g. BYQ4yYEZnFzxntuFQoQnSABFAVcB4tvMWH)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2065,7 +2065,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BDCCurrency signature</source>
+        <source>Enter BDCC signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2644,7 +2644,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>BDCCurrency version</source>
+        <source>BDCC version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2703,7 +2703,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BDCC Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2810,7 +2810,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@
     </message>
     <message>
         <location line="-104"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BDCCurrency will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BDCC will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3116,7 +3116,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@
     </message>
     <message>
         <location line="+8"/>
-        <source>Initialization sanity check failed. BDCCurrency is shutting down.</source>
+        <source>Initialization sanity check failed. BDCC is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3176,12 +3176,12 @@ for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BDCCurrency</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of BDCC</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart BDCCurrency to complete</source>
+        <source>Wallet needed to be rewritten: restart BDCC to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3241,7 +3241,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@
     </message>
     <message>
         <location line="+126"/>
-        <source>Unable to bind to %s on this computer. BDCCurrency is probably already running.</source>
+        <source>Unable to bind to %s on this computer. BDCC is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3281,7 +3281,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BDCCurrency Alert&quot; admin@
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BDCCurrency is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. BDCC is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

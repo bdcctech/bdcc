@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "BDCCurrency cannot be compiled without assertions."
+# error "BDCC cannot be compiled without assertions."
 #endif
 
 //
@@ -42,14 +42,12 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 34);
 
-unsigned int nStakeMinAge = 12 * 60 * 60; // 12 hours
+unsigned int nStakeMinAge = 6 * 60 * 60; // 6 hours
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 49; //50 (49 + 1)
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
-
-static const int64_t nTargetTimespan = 30 * 60;  // 30 mins
 
 uint256 nBestChainTrust = 0;
 uint256 nBestInvalidTrust = 0;
@@ -78,7 +76,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BDCCurrency Signed Message:\n";
+const string strMessageMagic = "BDCC Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -1030,6 +1028,47 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
     return nSubsidy + nFees;
 }
 
+static const int64_t nTargetTimespan = 30 * 60;  // 30 mins
+
+
+//
+// maximum nBits value could possible be required nTime after
+//
+unsigned int ComputeMaxBits(CBigNum bnTargetLimit, unsigned int nBase, int64_t nTime)
+{
+    CBigNum bnResult;
+    bnResult.SetCompact(nBase);
+    bnResult *= 2;
+    while (nTime > 0 && bnResult < bnTargetLimit)
+    {
+        // Maximum 200% adjustment per day...
+        bnResult *= 2;
+        nTime -= 24 * 60 * 60;
+    }
+    if (bnResult > bnTargetLimit)
+        bnResult = bnTargetLimit;
+    return bnResult.GetCompact();
+}
+
+//
+// minimum amount of work that could possibly be required nTime after
+// minimum proof-of-work required was nBase
+//
+unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
+{
+    return ComputeMaxBits(Params().ProofOfWorkLimit(), nBase, nTime);
+}
+
+//
+// minimum amount of stake that could possibly be required nTime after
+// minimum proof-of-stake required was nBase
+//
+unsigned int ComputeMinStake(unsigned int nBase, int64_t nTime, unsigned int nBlockTime)
+{
+    return ComputeMaxBits(bnProofOfStakeLimit, nBase, nTime);
+}
+
+
 // ppcoin: find last block index up to pindex
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake)
 {
@@ -1054,13 +1093,13 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
     if (pindexPrevPrev->pprev == NULL)
         return bnTargetLimit.GetCompact(); // second block
 
-    int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
+    //int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
     int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
     if (nActualSpacing < 0)
             nActualSpacing = nTargetSpacing;
 
-    if (nActualSpacing > nTargetSpacing * 10)
-            nActualSpacing = nTargetSpacing * 10;
+    //if (nActualSpacing > nTargetSpacing * 10)
+            //nActualSpacing = nTargetSpacing * 10;
 
 
     // ppcoin: target change every block
@@ -2299,7 +2338,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
 }
 
 #ifdef ENABLE_WALLET
-// bdccurrency: attempt to generate suitable proof-of-stake
+// bdcc: attempt to generate suitable proof-of-stake
 bool CBlock::SignBlock(CWallet& wallet, int64_t nFees)
 {
     // if we are trying to sign
@@ -2649,7 +2688,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("bdccurrency-loadblk");
+    RenameThread("bdcc-loadblk");
 
     CImportingNow imp;
 

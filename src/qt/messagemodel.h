@@ -67,7 +67,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to BDCCurrency Secure Messaging from Qt view code. */
+/** Interface to BDCC Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

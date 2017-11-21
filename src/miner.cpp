@@ -520,7 +520,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("bdccurrency-miner");
+    RenameThread("bdcc-miner");
 
     CReserveKey reservekey(pwallet);
 
@@ -582,9 +582,9 @@ int64_t nHPSTimerStart = 0;
 
 void static BitcoinMiner(CWallet *pwallet)
 {
-    LogPrintf("BDCCurrencyMiner started\n");
+    LogPrintf("BDCCMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("bdccurrency-miner");
+    RenameThread("bdcc-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -612,7 +612,7 @@ void static BitcoinMiner(CWallet *pwallet)
         
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        LogPrintf("Running BDCCurrencyMiner with %llu transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running BDCCMiner with %llu transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
         
         uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
@@ -681,7 +681,7 @@ void static BitcoinMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        LogPrintf("BDCCurrencyMiner terminated\n");
+        LogPrintf("BDCCMiner terminated\n");
         throw;
     }
 }

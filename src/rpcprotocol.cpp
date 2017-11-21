@@ -37,7 +37,7 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
 {
     ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: bdccurrency-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: bdcc-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: 127.0.0.1\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -60,7 +60,7 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
     if (nStatus == HTTP_UNAUTHORIZED)
         return strprintf("HTTP/1.0 401 Authorization Required\r\n"
             "Date: %s\r\n"
-            "Server: bdccurrency-json-rpc/%s\r\n"
+            "Server: bdcc-json-rpc/%s\r\n"
             "WWW-Authenticate: Basic realm=\"jsonrpc\"\r\n"
             "Content-Type: text/html\r\n"
             "Content-Length: 296\r\n"
@@ -87,7 +87,7 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
             "Connection: %s\r\n"
             "Content-Length: %u\r\n"
             "Content-Type: application/json\r\n"
-            "Server: bdccurrency-json-rpc/%s\r\n"
+            "Server: bdcc-json-rpc/%s\r\n"
             "\r\n"
             "%s",
         nStatus,
@@ -253,11 +253,11 @@ Object JSONRPCError(int code, const string& message)
     return error;
 }
 
-/** Username used when cookie authentication is in use (arbitrary, only for
+/** Username used when cookie authentication is in use (arbitrary, only for // Cookie Removed
   * recognizability in debugging/logging purposes)
-  */
+  
  static const std::string COOKIEAUTH_USER = "__cookie__";
- /** Default name for auth cookie file */
+ //Default name for auth cookie file 
  static const std::string COOKIEAUTH_FILE = "cookie";
 
  boost::filesystem::path GetAuthCookieFile()
@@ -273,8 +273,8 @@ Object JSONRPCError(int code, const string& message)
      RAND_bytes(rand_pwd, 32);
      std::string cookie = COOKIEAUTH_USER + ":" + EncodeBase64(&rand_pwd[0],32);
 
-      /* these are set to 077 in init.cpp unless overridden with -sysperms.
-      */
+      //these are set to 077 in init.cpp unless overridden with -sysperms.
+      
      std::ofstream file;
      boost::filesystem::path filepath = GetAuthCookieFile();
      file.open(filepath.string().c_str());
@@ -315,3 +315,4 @@ Object JSONRPCError(int code, const string& message)
          LogPrintf("%s: Unable to remove random auth cookie file: %s\n", __func__, e.what());
      }
  }
+*/ //Cookie Removed

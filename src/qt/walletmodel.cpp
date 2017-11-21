@@ -404,7 +404,7 @@ WalletModel::UnlockContext::~UnlockContext()
 
 void WalletModel::UnlockContext::CopyFrom(const UnlockContext& rhs)
 {
-    // BDCCurrency context; old object no longer relocks wallet
+    // BDCC context; old object no longer relocks wallet
     *this = rhs;
     rhs.relock = false;
 }

@@ -202,10 +202,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "Stop BDCCurrency server.");
+            "Stop BDCC server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "BDCCurrency server stopping";
+    return "BDCC server stopping";
 }
 
 
@@ -502,7 +502,8 @@ static void RPCAcceptHandler(boost::shared_ptr< basic_socket_acceptor<Protocol, 
 void StartRPCThreads()
 {
 
-    if (mapArgs["-rpcpassword"] == "")
+    /* //Cookie Removed
+	if (mapArgs["-rpcpassword"] == "")
 
     {
       LogPrintf("No rpcpassword set - using random cookie authentication\n");
@@ -515,6 +516,37 @@ void StartRPCThreads()
         }
     } else {
         strRPCUserColonPass = mapArgs["-rpcuser"] + ":" + mapArgs["-rpcpassword"];
+    }
+	*/
+	
+	strRPCUserColonPass = mapArgs["-rpcuser"] + ":" + mapArgs["-rpcpassword"];
+    if (((mapArgs["-rpcpassword"] == "") ||
+         (mapArgs["-rpcuser"] == mapArgs["-rpcpassword"])) && Params().RequireRPCPassword())
+    {
+        unsigned char rand_pwd[32];
+        RAND_bytes(rand_pwd, 32);
+        string strWhatAmI = "To use bdccd";
+        if (mapArgs.count("-server"))
+            strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
+        else if (mapArgs.count("-daemon"))
+            strWhatAmI = strprintf(_("To use the %s option"), "\"-daemon\"");
+        uiInterface.ThreadSafeMessageBox(strprintf(
+            _("%s, you must set a rpcpassword in the configuration file:\n"
+              "%s\n"
+              "It is recommended you use the following random password:\n"
+              "rpcuser=bdccrpc\n"
+              "rpcpassword=%s\n"
+              "(you do not need to remember this password)\n"
+              "The username and password MUST NOT be the same.\n"
+              "If the file does not exist, create it with owner-readable-only file permissions.\n"
+              "It is also recommended to set alertnotify so you are notified of problems;\n"
+              "for example: alertnotify=echo %%s | mail -s \"BDCC Alert\" admin@foo.com\n"),
+                strWhatAmI,
+                GetConfigFile().string(),
+                EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32)),
+                "", CClientUIInterface::MSG_ERROR);
+        StartShutdown();
+        return;
     }
 
     assert(rpc_io_service == NULL);
@@ -609,7 +641,7 @@ void StopRPCThreads()
     if (rpc_io_service == NULL) return;
 
     deadlineTimers.clear();
-    DeleteAuthCookie();
+    //DeleteAuthCookie();
     rpc_io_service->stop();
     if (rpc_worker_group != NULL)
         rpc_worker_group->join_all();
